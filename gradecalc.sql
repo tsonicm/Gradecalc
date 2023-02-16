@@ -1,0 +1,16 @@
+DECLARE @BD1 AS int =  7
+DECLARE @CA  AS int = 10
+DECLARE @EN3 AS int =  9
+DECLARE @P3  AS int =  8
+DECLARE @PI  AS int =  9
+DECLARE @SO1 AS int =  8
+DECLARE @SDA AS int =  9
+DECLARE @TGC AS int = 10
+
+DECLARE @CREDIT3 AS int
+SET @CREDIT3 = 5*@TGC + 5*@SO1 + 5*@BD1 + 5*@P3 + 4*@SDA + 2*@PI + 2*@EN3 + 2*@CA
+
+DECLARE @GRADE3 AS float
+SET @GRADE3 = CAST(@CREDIT3 AS float) / CAST(30 AS float)
+
+SELECT CAST(@CREDIT3 AS varchar) + '/300' AS 'Credite', ROUND(@GRADE3,3) AS 'Media'
