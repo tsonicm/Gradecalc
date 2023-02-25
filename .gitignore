@@ -75,7 +75,7 @@ dkms.conf
 *.lai
 
 # Executables
-*
+gradecalc
 
 ### CommonLisp ###
 *.FASL
